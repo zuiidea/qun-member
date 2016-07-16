@@ -1,5 +1,5 @@
 /**
- * Created by aresn on 16/5/11.
+ * Created by zuiidea on 16/7/18.
  */
 var Sequelize = require('sequelize');
 var config = require('.././config/config');

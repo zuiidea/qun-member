@@ -1,5 +1,5 @@
 /**
- * Created by aresn on 16/5/11.
+ * Created by zuiidea on 16/7/18.
  */
 
 var env = require('./env');
@@ -26,7 +26,7 @@ if (env == 'development') {
 
     // DB
     config.db = {
-        name: 'demotable',
+        name: 'zuiidea',
         host: 'localhost',
         user: 'root',
         passwd: 'root',
@@ -39,7 +39,7 @@ if (env == 'development') {
     config.redis.passwd = '';
 
     config.db = {
-        name: 'demotable',
+        name: 'zuiidea',
         host: 'localhost',
         user: 'root',
         passwd: 'root',
