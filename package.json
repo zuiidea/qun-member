@@ -1,22 +1,29 @@
 {
-  "name": "node-start",
-  "version": "0.0.0",
-  "private": true,
+  "name": "qun-member",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node web/main.js",
+    "tables": "node script/create_all_tables.js"
   },
   "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "ejs": "~2.4.1",
-    "express": "~4.13.4",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
+    "body-parser": "^1.15.1",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "md5": "^2.1.0",
+    "moment": "^2.13.0",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2",
+    "node-uuid": "^1.4.7",
+    "parseurl": "^1.3.1",
+    "q": "^1.4.1",
+    "redis": "^2.6.0-2",
+    "sequelize": "^3.23.0",
     "cheerio": "^0.20.0",
     "request": "^2.73.0"
-  },
-  "devDependencies": {
-    "mongoose": "^4.5.4"
   }
 }
