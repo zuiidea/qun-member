@@ -18,7 +18,7 @@ var config = {
 
 if (env == 'development') {
     // 端口
-    config.web_port = 9800;
+    config.web_port = 6000;
 
     // redis
     config.redis.host = '127.0.0.1';
@@ -33,7 +33,7 @@ if (env == 'development') {
         port: 3306
     };
 } else if (env == 'production') {
-    config.web_port = 9800;
+    config.web_port = 6000;
 
     config.redis.host = '127.0.0.1';
     config.redis.passwd = '';
