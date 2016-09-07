@@ -83,11 +83,11 @@ gulp.task('browserSync', function() {
         files: [
             config.dest.css,
             config.dest.js,
-            config.dest.img,
-            config.dest.html
+            config.dest.img
         ],
+        open: false,
         server: {
-            baseDir: "./dist/"
+            baseDir: "./web/static/"
         }
     });
 });
@@ -100,7 +100,7 @@ gulp.task('clean', function() {
         .pipe(clean());
 });
 
-gulp.task('dev', ['css', 'js', 'html', 'img', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js', 'img', 'browserSync'], function() {
     var watcher = gulp.watch(config.src.css, ['css']);
     gulp.watch(config.src.html, ['html']);
     gulp.watch(config.src.img, ['img']);
@@ -111,11 +111,11 @@ gulp.task('dev', ['css', 'js', 'html', 'img', 'browserSync'], function() {
 });
 
 gulp.task('default',['dev'],function() {
-  _task({
-      projectName: 'seajsExample'
-  })
+  // _task({
+  //     projectName: 'seajsExample'
+  // })
 });
 
 gulp.task('pub', ['clean'], function() {
-    gulp.start('css-min', 'js-min','html', 'img');
+    gulp.start('css-min', 'js-min', 'img');
 });

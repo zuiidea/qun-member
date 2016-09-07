@@ -19,17 +19,17 @@
         "img": [
             "src/img/**/*.*"
         ],
-        "clean": "dist/**/*.*"
+        "clean": "web/static/**/*.*"
     },
     "dest": {
-        "css": "dist/css/",
-        "img": "dist/img/",
-        "js": "dist/js/",
-        "html": "dist/html/",
-        "module": "dist/module/"
+        "css": "web/static/css/",
+        "img": "web/static/img/",
+        "js": "web/static/js/",
+        "html": "web/static/html/",
+        "module": "web/static/module/"
     },
     "res": {
-        "css": "dist/css/**/*.css",
-        "js": "dist/js/**/*.js"
+        "css": "web/static/css/**/*.css",
+        "js": "web/static/js/**/*.js"
     }
 }
