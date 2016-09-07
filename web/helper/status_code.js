@@ -1,7 +1,3 @@
-/**
- * Created by zuiidea on 16/7/18.
- */
-
 module.exports = {
     SUCCESS: '0',
     SUCCESS_MSG: 'success',

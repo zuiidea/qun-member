@@ -18,28 +18,28 @@ var config = {
 
 if (env == 'development') {
     // 端口
-    config.web_port = 6000;
+    config.web_port = 7000;
 
     // redis
-    config.redis.host = '127.0.0.1';
+    config.redis.host = 'localhost';
     config.redis.passwd = '';
 
     // DB
     config.db = {
-        name: 'zuiidea',
+        name: 'qunmember',
         host: 'localhost',
         user: 'root',
         passwd: 'root',
         port: 3306
     };
 } else if (env == 'production') {
-    config.web_port = 6000;
+    config.web_port = 7000;
 
-    config.redis.host = '127.0.0.1';
+    config.redis.host = 'localhost';
     config.redis.passwd = '';
 
     config.db = {
-        name: 'zuiidea',
+        name: 'qunmember',
         host: 'localhost',
         user: 'root',
         passwd: 'root',

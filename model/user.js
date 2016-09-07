@@ -1,24 +1,16 @@
-/**
- * Created by zuiidea on 16/7/18.
- */
-
-
-
 var Sequelize = require('sequelize');
 var config = require('.././config/config');
 var BaseModel = require('./base');
 
 var sequelize = new Sequelize(
-  config.db.name,
-  config.db.user,
-  config.db.passwd, {
-    'dialect': 'mysql',
-    'host': config.db.host,
-    'port': config.db.port,
-    dialectOptions: {
-        socketPath: "/var/run/mysqld/mysqld.sock"
+    config.db.name,
+    config.db.user,
+    config.db.passwd,
+    {
+        'dialect': 'mysql',
+        'host': config.db.host,
+        'port': config.db.port
     }
-  }
 );
 
 var User = sequelize.define('user', {
