@@ -1,14 +1,9 @@
-/**
- * Created by zuiidea on 16/7/18.
- */
-
 var env = require('./env');
-
 var config = {
     redis: {
         port: 6379
     },
-    // session
+
     session: {
         name: 'tdtoken',
         secret: '123456',
@@ -17,14 +12,11 @@ var config = {
 };
 
 if (env == 'development') {
-    // 端口
     config.web_port = 7000;
 
-    // redis
     config.redis.host = 'localhost';
     config.redis.passwd = '';
 
-    // DB
     config.db = {
         name: 'qunmember',
         host: 'localhost',

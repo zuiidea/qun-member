@@ -1,6 +1,3 @@
-/**
- * Created by zuiidea on 16/7/18.
- */
 var express = require('express');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
@@ -24,7 +21,9 @@ app.set('views', path.join(__dirname, './template'));
 app.set('view engine', 'ejs');
 app.use(logger("web"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(cookieParser());
 app.use(session({
     secret: config.session.secret,
@@ -35,33 +34,24 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     var views = req.session.views;
 
     if (!views) {
         views = req.session.views = {}
     }
-
-    // get the url pathname
     var pathname = parseurl(req).pathname;
-
-    // count the views
     views[pathname] = (views[pathname] || 0) + 1;
-
     next()
 });
 
-app.use(express.static( path.join(__dirname, 'static') ));
-
+app.use(express.static(path.join(__dirname, 'static')));
 app.use(render);
-
 app.use('/', sign.routes);
 app.use('/user', user);
-
 app.get("*", function(req, res) {
     res.status(404).end("404");
 });
-
 app.listen(config.web_port, function() {
     console.log('web listen on %s', config.web_port);
 });
