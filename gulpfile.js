@@ -71,11 +71,11 @@ gulp.task('img', function() {
 });
 
 // html
-gulp.task('html', function() {
-    return gulp.src(config.src.html)
-        .pipe(plumber())
-        .pipe(gulp.dest(config.dest.html));
-});
+// gulp.task('html', function() {
+//     return gulp.src(config.src.html)
+//         .pipe(plumber())
+//         .pipe(gulp.dest(config.dest.html));
+// });
 
 // watch
 gulp.task('browserSync', function() {
@@ -102,7 +102,7 @@ gulp.task('clean', function() {
 
 gulp.task('dev', ['css', 'js', 'img', 'browserSync'], function() {
     var watcher = gulp.watch(config.src.css, ['css']);
-    gulp.watch(config.src.html, ['html']);
+    // gulp.watch(config.src.html, ['html']);
     gulp.watch(config.src.img, ['img']);
     gulp.watch(config.src.js, ['js']);
     watcher.on('change', function(event) {

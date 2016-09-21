@@ -1,7 +1,2 @@
-/**
- * Created by zuiidea on 16/7/18.
- */
-
-var env = 'development';    // development  production
-
+var env = 'development';
 module.exports = env;

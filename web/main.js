@@ -7,19 +7,15 @@ var logger = require('morgan');
 var render = require('./handler/base_handler');
 var config = require('.././config/config');
 
-var sign = require('./handler/sign_handler');
+var index = require('./handler/index_handler');
 var user = require('./handler/user_handler');
 
 var app = express();
 var bodyParser = require('body-parser');
 
-/**
- * 路由扩展
- */
 
 app.set('views', path.join(__dirname, './template'));
 app.set('view engine', 'ejs');
-app.use(logger("web"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -47,7 +43,7 @@ app.use(function(req, res, next) {
 
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(render);
-app.use('/', sign.routes);
+app.use('/', index.routes);
 app.use('/user', user);
 app.get("*", function(req, res) {
     res.status(404).end("404");
